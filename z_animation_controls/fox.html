@@ -1,5 +1,5 @@
 <!-- https://github.com/jgbarah/aframe-playground/tree/master/moving-01 -->
-<!-- Fox : https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0/Fox -->
+<!-- fox : https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0/fox -->
 <!-- animations : dans le gltf "name":  Walk / Survey / Run-->
 <!DOCTYPE html>
 <html>
@@ -13,14 +13,14 @@
 
       <a-scene>
         <a-assets>
-          <a-asset-item id="fox" src="./models/fox.glb"></a-asset-item>
+          <a-asset-item id="femme-multi-action" src="./models/femme-multi-action.glb "></a-asset-item>
         </a-assets>
 
-        <a-entity position="-4 -2 -9"
+        <a-entity position="-1 1 -11"
                   rotation="0 60 0"
-                  scale="0.03 0.03 0.03"
-                  gltf-model="#fox"
-                  animation-mixer="clip: Survey">
+                  scale="2 2 2"
+                  gltf-model="#femme-multi-action"
+                  animation-mixer="clip: pas 02">
         </a-entity>
 
         <a-sky color="grey"></a-sky>
