@@ -31,7 +31,7 @@
 <body>
 <a-scene>
   <a-assets>
-    <a-asset-item id="Hugo_Antoine" src="./Hugo_Antoine.glb"></a-asset-item>
+    <a-asset-item id="Hugo_Antoine" src="/ZTEST/Hugo_Antoine.glb"></a-asset-item>
   </a-assets>
 
   <a-entity id=" Hugo et tous ses muscles"
@@ -39,8 +39,9 @@
             rotation="90 -90 0"
             scale="2 2 2"
             gltf-model="#Hugo_Antoine"
-            animation-mixer="clip: pas_05 ; repetitions: 3"
-            loaded>
+            animation-mixer="clip: pas_05 ; repetitions: 3; clampWhenFinished: true;"
+            loaded
+            finished>
   </a-entity>
 
   <a-sky color="#6EBAA7"></a-sky>
