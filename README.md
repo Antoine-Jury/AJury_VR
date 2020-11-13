@@ -1,1 +1,0 @@
-# AJury_VR
