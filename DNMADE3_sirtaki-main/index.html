@@ -186,7 +186,7 @@
 
     <!-- CHARGEMENT DES ASSETS -->
     <a-assets>
-      <a-asset-item id="glbAlizee" src="./assets/models/alizee_leo.glb"></a-asset-item>
+      <a-asset-item id="glbHugo" src="./assets/models/hugo_antoine.glb"></a-asset-item>
       <a-asset-item id="glbAntoine" src="./assets/models/antoine_hugo.glb"></a-asset-item>
       <a-asset-item id="glbJasmine" src="./assets/models/jasmine_louane.glb"></a-asset-item>
       <a-asset-item id="glbCome" src="./assets/models/come_adrien.glb"></a-asset-item>
@@ -205,13 +205,15 @@
     <a-entity light="type: ambient; color: #CCC; intensity: 1"></a-entity>
     <a-entity light="type: directional; castShadow:true; intensity: 0.5" position="-1 2 1"></a-entity>
 
+
+
     <!-- MODELES 3D -->
-    <a-entity id="alizee" gltf-model="#glbAlizee" loaded position="0 0 -3" rotation="90 0 90" animation-mixer="timeScale: 0" shadow="cast:true; receive:true" init_anim_delai="audio: zorba; delai: 5000; animdata: clip: pas_02;">
+    <a-entity id="hugo" gltf-model="#glbHugo" loaded position="0 0 -3" rotation="90 0 90" animation-mixer="timeScale: 0" shadow="cast:true; receive:true" init_anim_delai="audio: zorba; delai: 5000; animdata: clip: pas_02;">
     </a-entity>
 
-    <a-entity id="antoine" position="-1 0 -4" gltf-model="#glbAntoine" rotation="90 0 90" loaded animation-mixer="timeScale: 0" shadow="cast:true; receive:true" init_anim_delai="audio: zorba; delai: 5000; animdata: clip: pas_02;">
+    <a-entity id="antoine" position="-1 0 -4" gltf-model="#glbAntoine" rotation="90 0 -30" loaded animation-mixer="timeScale: 0" shadow="cast:true; receive:true" init_anim_delai="audio: zorba; delai: 5000; animdata: clip: pas_02;">
     </a-entity>
-    <a-entity id="jasmine" scale="0.2 0.2 0.2" position="1 0 -4" gltf-model="#glbJasmine" rotation="90 0 90" loaded animation-mixer="timeScale: 0" shadow="cast:true; receive:true" init_anim_delai="audio: zorba; delai: 5000; animdata: clip: pas_05;">
+    <a-entity id="jasmine" scale="1 1.2 1.1" position="1 0 -4" gltf-model="#glbJasmine" rotation="90 0 90" loaded animation-mixer="timeScale: 0" shadow="cast:true; receive:true" init_anim_delai="audio: zorba; delai: 5000; animdata: clip: pas_05;">
     </a-entity>
     <a-entity id="come" position="2 0 -5" gltf-model="#glbCome" rotation="90 0 90" loaded animation-mixer="timeScale: 0" shadow="cast:true; receive:true" init_anim_delai="audio: zorba; delai: 9000; animdata: clip: pas_02;">
     </a-entity>
