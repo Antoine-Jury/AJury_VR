@@ -145,12 +145,13 @@
     			<a-asset-item id="glbAlizee" src="./assets/models/alizee_leo.glb"></a-asset-item>
     			<a-asset-item id="glbAntoine" src="./assets/models/Antoine_Hugo.glb"></a-asset-item>
      			<a-asset-item id="glbCecile" src="./assets/models/cecile_genia.glb"></a-asset-item>
-    			<a-asset-item id="glbCome" src="./assets/models/come_adrien.glb"></a-asset-item>
+    			<a-asset-item id="glbHugo" src="./assets/models/hugo_antoine.glb"></a-asset-item>
     			<a-asset-item id="glbLeo" src="./assets/models/leo_alizee.glb"></a-asset-item>
     			<a-asset-item id="glbLoic" src="./assets/models/loic_marion.glb"></a-asset-item>
     			<a-asset-item id="glbMartin" src="./assets/models/martin_tom.glb"></a-asset-item>
-                <a-asset-item id="glbMarion" src="./assets/models/marion_loic.glb"></a-asset-item>
-                <a-asset-item id="monde1" src="./assets/models/monde1.glb"></a-asset-item>
+          <a-asset-item id="glbMarion" src="./assets/models/marion_loic.glb"></a-asset-item>
+          
+                <a-asset-item id="scéno" src="./assets/models/scéno.glb"></a-asset-item>
 
                 <!-- <a-asset-item id="glbHugo" src="./assets/models/hugo_antoine.glb"></a-asset-item> -->
 				<!-- <a-asset-item id="glbAdrien" src="./assets/models/adrien_come.glb"></a-asset-item>				<a-asset-item id="glbJasmine" src="./assets/models/jasmine_louane.glb"></a-asset-item> -->
@@ -161,7 +162,6 @@
 				<!-- <a-asset-item id="glbjasmine" src="./assets/models/jasmine_louane.glb"></a-asset-item> -->
 
                 <audio id="zorba" src="./assets/audio/zorba.mp3" preload="auto" loop="false"></audio>
-                <img id="img360" crossorigin="anonymous" src="./assets/img/santorin 4.jpg" />
             </a-assets>
 
             <!-- ECLAIRAGES -->
@@ -181,7 +181,7 @@
                        sirtaki
 					   >
             </a-entity>
-            <a-entity  id ="come" gltf-model="#glbCome"
+            <a-entity  id ="hugo" gltf-model="#glbHugo"
                        position="1 0 -2.5" rotation="90 180 90"
                        model_loaded shadow="cast:true; receive:true"
                        animation-mixer="clip: ready; clampWhenFinished: true; repetitions: 1; duration: 2; "
@@ -235,7 +235,12 @@
                        delay_ready="audio: zorba; delai: 5000;"
                        >
             </a-entity>
-            
+
+            <a-entity  id ="scéno" gltf-model="#glbSceno"
+                       position="0 0 0" rotation="90 90 90"
+                       >
+            </a-entity>
+
             <!-- ANNONCE -->
             <a-text id="texte" value="teach me to dance" align="center" color="#FFF"
                     visible="true" position="1 0.75 -2"
@@ -248,23 +253,6 @@
 
 
             <!-- ENVIRONNEMENTS (ici photo 360)-->
-			<a-sky src="#img360" position="-2.06 10 -20" rotation="0 95 0"></a-sky>
-            <a-entity  id ="int" gltf-model="#monde1"
-            position="-0.920 4.05 1.460" rotation="0 -70 0" scale="0.5 0.5 0.5"
-            model_loaded>
-            </a-entity>
-            <a-plane position="-2.06 10 -20" rotation="0 95 0"
-                     width="30" height="10" color="#CCCCCC"
-                     shadow="receive: true"
-                     shadow-material="opacite: 0.7">
-            </a-plane>
-            <a-plane position="0 0 0" rotation="-90 0 0"
-                     width="10" height="10" color="#CCCCCC"
-
-                     shadow="receive: true"
-                     shadow-material="opacite: 0.7"
-                     >
-            </a-plane>
 
             <a-camera>
                 <a-cursor id="curseur"></a-cursor>
@@ -282,8 +270,8 @@
 
         <script>
 
-        
-        
+
+
         var b = document.querySelector('#bouton');
             var son = document.querySelector('#zorba');
 
@@ -332,8 +320,8 @@
                 }
                 return periode;
             }
-            
-            
+
+
         // DEMARRAGE AUDIO (mouseenter) : 1 parametre audio = id de l'audio
         AFRAME.registerComponent('init_sound', {
           schema: {
